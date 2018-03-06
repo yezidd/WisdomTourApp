@@ -19,9 +19,11 @@
     "jsxBracketSameLine": true
   },
   "dependencies": {
+    "mobx": "^3.6.1",
+    "mobx-react": "^4.4.2",
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.0",
-    "react-navigation": "^1.4.0"
+    "react-navigation": "file:react-navigation"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
