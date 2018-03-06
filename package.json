@@ -9,7 +9,8 @@
   },
   "prettier": {
     "singleQuote": true,
-    "semi": false
+    "semi": false,
+    "jsxBracketSameLine": true
   },
   "dependencies": {
     "react": "^16.3.0-alpha.1",
