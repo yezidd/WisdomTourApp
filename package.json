@@ -25,6 +25,7 @@
     "react-navigation": "^1.4.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "babel-jest": "22.4.1",
     "babel-preset-react-native": "4.0.0",
     "eslint": "^4.18.2",
