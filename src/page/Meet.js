@@ -8,9 +8,11 @@ const styles = StyleSheet.create({})
 export default class Meet extends Component {
   static navigationOptions = () => {
     return {
-      title: '遇见'
+      title: '遇见',
+      header: null
     }
   }
+
   render() {
     return <View />
   }

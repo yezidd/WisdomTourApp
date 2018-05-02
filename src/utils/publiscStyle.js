@@ -15,7 +15,8 @@ export const line = 1 / PixelRatio.get()
 export const publicStyle = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ececf1'
+    backgroundColor: '#FFFFFF',
+    paddingTop: __IOS__ ? 20 : 0
   },
   borderBottomStyle: {
     borderBottomWidth: line,
