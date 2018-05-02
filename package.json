@@ -21,15 +21,15 @@
   "dependencies": {
     "mobx": "^3.6.1",
     "mobx-react": "^4.4.2",
-    "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.0",
-    "react-navigation": "file:react-navigation",
-    "react-navigation-is-focused-hoc": "^1.1.1",
     "moment": "^2.20.1",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "^0.52.2",
     "react-native-interactable": "^0.1.10",
     "react-native-keyboard-aware-scroll-view": "^0.4.4",
     "react-native-modal-datetime-picker": "^5.1.0",
     "react-native-picker": "^4.3.5",
+    "react-navigation": "file:react-navigation",
+    "react-navigation-is-focused-hoc": "^1.1.1",
     "urijs": "^1.19.0"
   },
   "devDependencies": {
