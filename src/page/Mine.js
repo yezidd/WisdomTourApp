@@ -6,6 +6,12 @@ import { View, Text, StyleSheet, Image, TextInput } from 'react-native'
 
 const styles = StyleSheet.create({})
 export default class Mine extends Component {
+  static navigationOptions = () => {
+    return {
+      title: '我的'
+    }
+  }
+
   render() {
     return <View />
   }
