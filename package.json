@@ -25,6 +25,7 @@
     "react-native": "^0.52.2",
     "react-native-amap-geolocation": "^0.3.0",
     "react-native-amap3d": "^1.0.0-beta.1",
+    "react-native-camera": "^1.1.2",
     "react-native-interactable": "^0.1.10",
     "react-native-keyboard-aware-scroll-view": "^0.4.4",
     "react-native-modal-datetime-picker": "^5.1.0",

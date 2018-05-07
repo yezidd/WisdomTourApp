@@ -21,7 +21,7 @@ target 'WisdomTourApp' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'GLog', :podspec => '../node_modules/react-native/third-party-podspecs/GLog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-
+  pod 'react-native-camera', path: '../node_modules/react-native-camera'
   pod 'react-native-amap3d', path: '../node_modules/react-native-amap3d/lib/ios'
   pod 'react-native-amap-geolocation', path: '../node_modules/react-native-amap-geolocation/lib/ios'
 end
