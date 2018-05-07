@@ -4745,6 +4745,14 @@ react-lifecycles-compat@^1.0.2:
   version "1.1.4"
   resolved "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-1.1.4.tgz#fc005c72849b7ed364de20a0f64ff58ebdc2009a"
 
+react-native-amap-geolocation@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/react-native-amap-geolocation/-/react-native-amap-geolocation-0.3.0.tgz#bbe2e4fcc899b957b71eaebbbebae7baea99d7e4"
+
+react-native-amap3d@^1.0.0-beta.1:
+  version "1.0.0-beta.1"
+  resolved "https://registry.npmjs.org/react-native-amap3d/-/react-native-amap3d-1.0.0-beta.1.tgz#1e01a4ae22a77b1cfd9d1afa7fd2a64ca4746a65"
+
 react-native-animatable@^1.2.4:
   version "1.2.4"
   resolved "https://registry.npmjs.org/react-native-animatable/-/react-native-animatable-1.2.4.tgz#b5fb7657e8f6edadbc26697057a327fb920b3039"

@@ -1,0 +1,123 @@
+PODS:
+  - AMap3DMap (6.1.0):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.4.3)
+  - AMapLocation (2.6.0):
+    - AMapFoundation (~> 1.4)
+  - boost (1.59.0):
+    - boost/graph-includes (= 1.59.0)
+    - boost/math-includes (= 1.59.0)
+    - boost/numeric-includes (= 1.59.0)
+    - boost/pointer_cast-includes (= 1.59.0)
+    - boost/preprocessor-includes (= 1.59.0)
+    - boost/shared_ptr-includes (= 1.59.0)
+    - boost/string_algorithms-includes (= 1.59.0)
+  - boost/graph-includes (1.59.0)
+  - boost/math-includes (1.59.0)
+  - boost/numeric-includes (1.59.0)
+  - boost/pointer_cast-includes (1.59.0)
+  - boost/preprocessor-includes (1.59.0)
+  - boost/shared_ptr-includes (1.59.0)
+  - boost/string_algorithms-includes (1.59.0)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.09.26.00):
+    - boost
+    - DoubleConversion
+    - GLog
+  - GLog (0.3.4)
+  - React (0.52.3):
+    - React/Core (= 0.52.3)
+  - react-native-amap-geolocation (0.3.0):
+    - AMapLocation (~> 2.6.0)
+    - React
+  - react-native-amap3d (1.0.0-beta.1):
+    - AMap3DMap (~> 6.1.0)
+    - React
+  - React/Core (0.52.3):
+    - yoga (= 0.52.3.React)
+  - React/CxxBridge (0.52.3):
+    - Folly (= 2016.09.26.00)
+    - React/Core
+    - React/cxxreact
+  - React/cxxreact (0.52.3):
+    - boost
+    - Folly (= 2016.09.26.00)
+    - React/jschelpers
+    - React/jsinspector
+  - React/DevSupport (0.52.3):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.52.3)
+  - React/jschelpers (0.52.3):
+    - Folly (= 2016.09.26.00)
+    - React/PrivateDatabase
+  - React/jsinspector (0.52.3)
+  - React/PrivateDatabase (0.52.3)
+  - React/RCTAnimation (0.52.3):
+    - React/Core
+  - React/RCTBlob (0.52.3):
+    - React/Core
+  - React/RCTNetwork (0.52.3):
+    - React/Core
+  - React/RCTText (0.52.3):
+    - React/Core
+  - React/RCTWebSocket (0.52.3):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - yoga (0.52.3.React)
+
+DEPENDENCIES:
+  - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - GLog (from `../node_modules/react-native/third-party-podspecs/GLog.podspec`)
+  - react-native-amap-geolocation (from `../node_modules/react-native-amap-geolocation/lib/ios`)
+  - react-native-amap3d (from `../node_modules/react-native-amap3d/lib/ios`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/CxxBridge (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTAnimation (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AMap3DMap
+    - AMapFoundation
+    - AMapLocation
+    - boost
+
+EXTERNAL SOURCES:
+  DoubleConversion:
+    :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  Folly:
+    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+  GLog:
+    :podspec: "../node_modules/react-native/third-party-podspecs/GLog.podspec"
+  React:
+    :path: "../node_modules/react-native"
+  react-native-amap-geolocation:
+    :path: "../node_modules/react-native-amap-geolocation/lib/ios"
+  react-native-amap3d:
+    :path: "../node_modules/react-native-amap3d/lib/ios"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  AMap3DMap: 2cf8028884fc66c7e051f5e8818808949eff290d
+  AMapFoundation: 973682cfe60b92efd73a8ef8f1144fa0fa8e1296
+  AMapLocation: 55116a2c8956eab7550cbb56e989aa5cdcc424e3
+  boost: 30a15ffb6d9aa4646dd3caffc960753f4cb4ca4e
+  DoubleConversion: ebb6747c5b66026ad4f97b789c3ceac6f18e57a6
+  Folly: b7255b29f1d693c375d642d0f04f0592181156d9
+  GLog: 3e4e4ae9746ce6bf6e9420c7fc1e08ad59c8ba1a
+  React: 43e97926f429d846050880666de1809e22dd5cc5
+  react-native-amap-geolocation: 86a40d13992b4c7e9bf9a9ed3b21ec5f2c151063
+  react-native-amap3d: d7f7dfeca6c95873ffcaca47d3b12a7a6432ec4a
+  yoga: 55da126afc384965b96bff46652464373b330add
+
+PODFILE CHECKSUM: eaf1911cf2a266f5ddf39e525d9fc295269a78e3
+
+COCOAPODS: 1.5.0
