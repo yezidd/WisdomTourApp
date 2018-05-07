@@ -33,6 +33,14 @@ PODS:
   - react-native-amap3d (1.0.0-beta.1):
     - AMap3DMap (~> 6.1.0)
     - React
+  - react-native-camera (1.1.2):
+    - React
+    - react-native-camera/RCT (= 1.1.2)
+    - react-native-camera/RN (= 1.1.2)
+  - react-native-camera/RCT (1.1.2):
+    - React
+  - react-native-camera/RN (1.1.2):
+    - React
   - React/Core (0.52.3):
     - yoga (= 0.52.3.React)
   - React/CxxBridge (0.52.3):
@@ -73,6 +81,7 @@ DEPENDENCIES:
   - GLog (from `../node_modules/react-native/third-party-podspecs/GLog.podspec`)
   - react-native-amap-geolocation (from `../node_modules/react-native-amap-geolocation/lib/ios`)
   - react-native-amap3d (from `../node_modules/react-native-amap3d/lib/ios`)
+  - react-native-camera (from `../node_modules/react-native-camera`)
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
@@ -102,6 +111,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-amap-geolocation/lib/ios"
   react-native-amap3d:
     :path: "../node_modules/react-native-amap3d/lib/ios"
+  react-native-camera:
+    :path: "../node_modules/react-native-camera"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -116,8 +127,9 @@ SPEC CHECKSUMS:
   React: 43e97926f429d846050880666de1809e22dd5cc5
   react-native-amap-geolocation: 86a40d13992b4c7e9bf9a9ed3b21ec5f2c151063
   react-native-amap3d: d7f7dfeca6c95873ffcaca47d3b12a7a6432ec4a
+  react-native-camera: ab22041dcf0403d88f2ae4b9ea3ed2644e680423
   yoga: 55da126afc384965b96bff46652464373b330add
 
-PODFILE CHECKSUM: eaf1911cf2a266f5ddf39e525d9fc295269a78e3
+PODFILE CHECKSUM: bf2926f3aae35b085d36a6d82e118d0f879dd8f4
 
 COCOAPODS: 1.5.0
