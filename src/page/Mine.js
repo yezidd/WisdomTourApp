@@ -197,7 +197,9 @@ export default class Mine extends Component {
           <FlatList
             renderItem={({item, index}) => this.renderItem(item, index)}
             data={[1, 2, 3]}
-            keyExtractor={(item, index) => index}
+            keyExtractor={(item, index) => {
+              return index;
+            }}
           />
         </View>
       </View>
