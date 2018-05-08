@@ -16,7 +16,6 @@ import {
 import Home from '../page/Home'
 import Mine from '../page/Mine'
 import Meet from '../page/Meet'
-import Scan from "../page/Scan";
 
 export const TabBar = TabNavigator(
   {
@@ -55,24 +54,6 @@ export const TabBar = TabNavigator(
     // },
     Mine: {
       screen: Mine,
-      navigationOptions: {
-        tabBarLabel: '我',
-
-        tabBarIcon: ({ focused, tintColor }) => (
-          <Image
-            source={
-              !focused
-                ? require('../asset/tab3.png')
-                : require('../asset/tab3Active.png')
-            }
-            style={[styles.tabIcon]}
-            resizeMode="contain"
-          />
-        )
-      }
-    },
-    Scan: {
-      screen: Scan,
       navigationOptions: {
         tabBarLabel: '我',
 

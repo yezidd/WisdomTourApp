@@ -9,7 +9,8 @@ import {
   Image,
   TextInput,
   ImageBackground,
-  FlatList
+  FlatList,
+  TouchableOpacity
 } from 'react-native'
 import {line, publicStyle, width} from '../utils/publiscStyle'
 
@@ -163,6 +164,11 @@ export default class Mine extends Component {
     return <Item item={item} index={index}/>
   }
 
+  //跳转到识图的modal
+  toScanModal = () => {
+    const {navigate} = this.props.navigation;
+    navigate("ScanModal")
+  }
 
   render() {
     return (
@@ -188,9 +194,9 @@ export default class Mine extends Component {
             <View style={styles.nameView}>
               <Text style={styles.font2}>半夏的小人祭</Text>
             </View>
-            <View style={styles.shareBtn}>
-              <Text style={styles.font2}>分享形色</Text>
-            </View>
+            <TouchableOpacity style={styles.shareBtn} onPress={this.toScanModal}>
+              <Text style={styles.font2}>拍照识图</Text>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
         <View style={styles.picView}>

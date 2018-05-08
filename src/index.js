@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback
 } from 'react-native'
-import { observer } from 'mobx-react/native'
+import {observer} from 'mobx-react/native'
 import {
   StackNavigator,
   TabNavigator,
@@ -23,7 +23,8 @@ import {
   fromRight,
   fromBottomLikeAndroid
 } from './utils/navigationUtil'
-import { TabBar } from './utils/TabBar'
+import {TabBar} from './utils/TabBar'
+import ScanModal from "./page/modal/ScanModal";
 
 const Stack = StackNavigator(
   {
@@ -59,12 +60,13 @@ const Stack = StackNavigator(
 
 export const BottomModal = StackNavigator(
   {
-    Stack: { screen: Stack }
+    Stack: {screen: Stack},
+    ScanModal: {screen: ScanModal}
   },
   {
     mode: 'modal',
     headerMode: 'none',
-    transitionConfig: () => ({ screenInterpolator: fromBottomLikeAndroid }),
+    transitionConfig: () => ({screenInterpolator: fromBottomLikeAndroid}),
     cardStyle: {
       backgroundColor: 'rgba(0,0,0,0)',
       shadowOpacity: 0

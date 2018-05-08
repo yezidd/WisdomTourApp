@@ -30,6 +30,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.4.4",
     "react-native-modal-datetime-picker": "^5.1.0",
     "react-native-picker": "^4.3.5",
+    "react-native-simple-toast": "^0.0.8",
     "react-navigation": "file:react-navigation",
     "react-navigation-is-focused-hoc": "^1.1.1",
     "urijs": "^1.19.0"
