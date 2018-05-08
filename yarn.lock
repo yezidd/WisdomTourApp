@@ -2198,6 +2198,12 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
+fbemitter@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/fbemitter/-/fbemitter-2.1.1.tgz#523e14fdaf5248805bb02f62efc33be703f51865"
+  dependencies:
+    fbjs "^0.8.4"
+
 fbjs-scripts@^0.8.1:
   version "0.8.1"
   resolved "https://registry.npmjs.org/fbjs-scripts/-/fbjs-scripts-0.8.1.tgz#c1c6efbecb7f008478468976b783880c2f669765"
@@ -2211,7 +2217,7 @@ fbjs-scripts@^0.8.1:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.9:
+fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.16"
   resolved "https://registry.npmjs.org/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -5958,7 +5964,7 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-urijs@^1.19.0:
+urijs@^1.19.1:
   version "1.19.1"
   resolved "https://registry.npmjs.org/urijs/-/urijs-1.19.1.tgz#5b0ff530c0cbde8386f6342235ba5ca6e995d25a"
 

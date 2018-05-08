@@ -13,6 +13,7 @@ import {
   TouchableOpacity
 } from 'react-native'
 import {line, publicStyle, width} from '../utils/publiscStyle'
+import {get} from '../logic/rpc';
 
 const list = require('../asset/icon/list.png')
 const mess = require('../asset/icon/mess.png')
@@ -158,6 +159,11 @@ export default class Mine extends Component {
       title: '我的',
       header: null
     }
+  }
+
+  async componentWillMount() {
+
+   await get("/string");
   }
 
   renderItem = (item, index) => {

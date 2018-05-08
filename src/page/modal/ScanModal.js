@@ -13,6 +13,7 @@ import {RNCamera} from 'react-native-camera';
 import {observer} from 'mobx-react';
 import {observable} from 'mobx';
 import {__IOS__, height, publicStyle, width} from "../../utils/publiscStyle";
+import {uploadImage} from "../../logic/rpc";
 
 
 const deleteIcon = require("../../asset/icon/delete.png");
@@ -192,7 +193,7 @@ export default class ScanModal extends Component {
       const options = {quality: 0.5, base64: false, skipProcessing: true};
 
       const data = await this.camera.takePictureAsync(options);
-      alert(data.uri);
+      await uploadImage(data.uri);
     }
   };
 }

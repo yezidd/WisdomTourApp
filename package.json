@@ -18,6 +18,7 @@
     "jsxBracketSameLine": true
   },
   "dependencies": {
+    "fbemitter": "^2.1.1",
     "mobx": "^3.6.1",
     "mobx-react": "^4.4.2",
     "moment": "^2.20.1",
@@ -33,7 +34,7 @@
     "react-native-simple-toast": "^0.0.8",
     "react-navigation": "file:react-navigation",
     "react-navigation-is-focused-hoc": "^1.1.1",
-    "urijs": "^1.19.0"
+    "urijs": "^1.19.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
