@@ -27,14 +27,4 @@ allprojects {
         maven { url "https://maven.google.com" }
         google()
     }
-    subprojects {
-        project.configurations.all {
-            resolutionStrategy.eachDependency { details ->
-                if (details.requested.group == 'com.android.support'
-                        && !details.requested.name.contains('multidex') ) {
-                    details.useVersion "26.0.2"
-                }
-            }
-        }
-    }
 }
