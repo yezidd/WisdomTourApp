@@ -190,10 +190,11 @@ export default class ScanModal extends Component {
 
   takePicture = async function () {
     if (this.camera) {
-      const options = {quality: 0.5, base64: false, skipProcessing: true};
+      const options = {quality: 0.5, base64: false};
 
       const data = await this.camera.takePictureAsync(options);
       await uploadImage(data.uri);
+
     }
   };
 }

@@ -16,6 +16,7 @@ import {
 import Home from '../page/Home'
 import Mine from '../page/Mine'
 import Meet from '../page/Meet'
+import ScanResult from "../page/ScanResult";
 
 export const TabBar = TabNavigator(
   {
@@ -24,7 +25,7 @@ export const TabBar = TabNavigator(
       navigationOptions: {
         tabBarLabel: '遇见',
 
-        tabBarIcon: ({ focused, tintColor }) => (
+        tabBarIcon: ({focused, tintColor}) => (
           <Image
             source={
               !focused
@@ -37,27 +38,30 @@ export const TabBar = TabNavigator(
         )
       }
     },
-    // Schedule: {
-    //   screen: Home,
-    //   navigationOptions: {
-    //     tabBarLabel: '拍照',
-    //
-    //     tabBarIcon: ({focused, tintColor}) => (
-    //       <View style={styles.picView}>
-    //         <Image
-    //           source={!focused ? require('../asset/tab2.png') : require('../asset/tab2Active.png')}
-    //           style={[styles.tabIcon1]}
-    //           resizeMode="contain"/>
-    //       </View>
-    //     ),
-    //   }
-    // },
+    ScanResult: {
+      screen: ScanResult,
+      navigationOptions: {
+        tabBarLabel: '我',
+
+        tabBarIcon: ({focused, tintColor}) => (
+          <Image
+            source={
+              !focused
+                ? require('../asset/tab3.png')
+                : require('../asset/tab3Active.png')
+            }
+            style={[styles.tabIcon]}
+            resizeMode="contain"
+          />
+        )
+      }
+    },
     Mine: {
       screen: Mine,
       navigationOptions: {
         tabBarLabel: '我',
 
-        tabBarIcon: ({ focused, tintColor }) => (
+        tabBarIcon: ({focused, tintColor}) => (
           <Image
             source={
               !focused
@@ -82,7 +86,7 @@ export const TabBar = TabNavigator(
       activeTintColor: '#3399ff', // 文字和图片选中颜色icon_dd11@2x.png
       inactiveTintColor: '#919caa', // 文字和图片默认颜色
       showIcon: true, // android 默认不显示 icon, 需要设置为 true 才会显示
-      indicatorStyle: { height: 0 }, // android 中TabBar下面会显示一条线，高度设为 0 后就不显示线了， 不知道还有没有其它方法隐藏？？？
+      indicatorStyle: {height: 0}, // android 中TabBar下面会显示一条线，高度设为 0 后就不显示线了， 不知道还有没有其它方法隐藏？？？
       style: {
         backgroundColor: '#f8f8fa', // TabBar 背景色
         height: 49,

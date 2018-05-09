@@ -26,7 +26,7 @@ export default RPC;
 const KEY_TOKEN = 'token';
 let ROOT_URL;
 
-ROOT_URL = 'http://192.168.155.3:3000';//开发
+ROOT_URL = 'http://192.168.155.2:3000';//开发
 // ROOT_URL = 'https://api-gw.duojin.xll512.com/v1';//release
 
 

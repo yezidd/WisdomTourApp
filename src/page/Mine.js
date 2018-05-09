@@ -161,11 +161,6 @@ export default class Mine extends Component {
     }
   }
 
-  async componentWillMount() {
-
-   await get("/string");
-  }
-
   renderItem = (item, index) => {
     return <Item item={item} index={index}/>
   }
