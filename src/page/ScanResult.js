@@ -13,7 +13,7 @@ import {
   ImageBackground,
   TouchableOpacity
 } from 'react-native';
-import {publicStyle, width, height} from '../utils/publiscStyle'
+import {publicStyle, width, height, __IOS__} from '../utils/publiscStyle'
 import Swiper from 'react-native-swiper';
 
 const styles = StyleSheet.create({
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   resultPic: {
     width: 300,
     height: 300,
-    borderRadius: 300,
+    borderRadius: __IOS__ ? 150 : 300,
     borderWidth: 5,
     borderColor: "#FFFFFF",
   },
@@ -102,6 +102,12 @@ export default class ScanResult extends Component {
     this.state = {}
   }
 
+  //跳转到扫描的结果
+  toScanInfo = () => {
+    const {navigate} = this.props.navigation;
+    navigate("ScanInfo");
+  };
+
   render() {
     return (
       <ScrollView>
@@ -131,7 +137,7 @@ export default class ScanResult extends Component {
                   style={styles.resultPic}
                 />
               </View>
-              <TouchableOpacity style={styles.infoBtn}>
+              <TouchableOpacity style={styles.infoBtn} onPress={this.toScanInfo}>
                 <Text style={styles.font3}>点击查看详情</Text>
               </TouchableOpacity>
             </View>
@@ -144,7 +150,7 @@ export default class ScanResult extends Component {
                   style={styles.resultPic}
                 />
               </View>
-              <TouchableOpacity style={styles.infoBtn}>
+              <TouchableOpacity style={styles.infoBtn} onPress={this.toScanInfo}>
                 <Text style={styles.font3}>点击查看详情</Text>
               </TouchableOpacity>
             </View>

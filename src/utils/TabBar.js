@@ -17,11 +17,12 @@ import Home from '../page/Home'
 import Mine from '../page/Mine'
 import Meet from '../page/Meet'
 import ScanResult from "../page/ScanResult";
+import ScanInfo from "../page/ScanInfo";
 
 export const TabBar = TabNavigator(
   {
     Meet: {
-      screen: Meet,
+      screen: ScanInfo,
       navigationOptions: {
         tabBarLabel: '遇见',
 

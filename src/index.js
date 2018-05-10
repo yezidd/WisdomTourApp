@@ -25,10 +25,12 @@ import {
 } from './utils/navigationUtil'
 import {TabBar} from './utils/TabBar'
 import ScanModal from "./page/modal/ScanModal";
+import ScanInfo from "./page/ScanInfo";
 
 const Stack = StackNavigator(
   {
-    TabBar: TabBar
+    TabBar: TabBar,
+    ScanInfo: {screen: ScanInfo}
   },
   {
     initialRouteName: 'TabBar',

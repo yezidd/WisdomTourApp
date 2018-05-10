@@ -11,7 +11,12 @@ export const width = Dimensions.get('window').width
 export const height = Dimensions.get('window').height
 export const __IOS__ = Platform.OS === 'ios'
 export const __ANDROID__ = Platform.OS !== 'ios'
-export const line = 1 / PixelRatio.get()
+export const line = 1 / PixelRatio.get();
+//宋字体
+export const __SONG__ = "song";
+//黑字体
+export const __HEI__ = "hei";
+
 export const publicStyle = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,7 +29,7 @@ export const publicStyle = StyleSheet.create({
   },
   shadow: {
     shadowColor: '#DCDCDC',
-    shadowOffset: { width: 0, height: 1 },
+    shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.5,
     shadowRadius: 2,
     elevation: 1
