@@ -18,14 +18,14 @@ import Mine from '../page/Mine'
 import Meet from '../page/Meet'
 import ScanResult from "../page/ScanResult";
 import ScanInfo from "../page/ScanInfo";
+import Login from "../page/Login";
 
 export const TabBar = TabNavigator(
   {
     Meet: {
-      screen: ScanInfo,
+      screen: Login,
       navigationOptions: {
         tabBarLabel: '遇见',
-
         tabBarIcon: ({focused, tintColor}) => (
           <Image
             source={

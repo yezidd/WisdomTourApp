@@ -25,7 +25,17 @@
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-
+  NSInteger totalCount = 0;
+  for (NSString *familyName in [UIFont familyNames]) {
+    NSArray *familyNameArr = [UIFont fontNamesForFamilyName:familyName];
+    NSLog(@"familyName:%@   count=%ld", familyName,[familyNameArr count]);
+    NSInteger tempCount = [familyNameArr count];
+    totalCount += tempCount;
+    for (NSString *fontName in familyNameArr) {
+      NSLog(@"++++     %@", fontName);
+    }
+  }
+  NSLog(@"totalCount=%ld",totalCount);
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
