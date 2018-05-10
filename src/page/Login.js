@@ -12,6 +12,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {line, publicStyle, width} from "../utils/publiscStyle";
+import CDButton from "../component/CDButton";
 
 const bg2 = require('../asset/bg/bg2.png');
 const deleteIcon = require("../asset/icon/delete.png");
@@ -104,15 +105,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "#8EE5EE",
-    marginLeft:50,
-    marginRight:50,
-    borderRadius:25
+    marginLeft: 50,
+    marginRight: 50,
+    borderRadius: 25
   },
   font10: {
     color: "#FFFFFF",
     fontSize: 16
   }
 });
+
 export default class Login extends Component {
 
   static navigationOptions = {
@@ -160,9 +162,7 @@ export default class Login extends Component {
                 placeholderTextColor={"rgba(255,255,255,0.8)"}
               />
               <View style={styles.line2}/>
-              <TouchableOpacity style={styles.verifyBtn}>
-                <Text style={styles.font9}>立即获取</Text>
-              </TouchableOpacity>
+              <CDButton style={styles.verifyBtn} textStyle={styles.font10}/>
             </View>
             <TouchableOpacity style={styles.loginBtn}>
               <Text style={styles.font10}>登录</Text>
