@@ -11,7 +11,7 @@ import {
   ImageBackground,
   TouchableOpacity
 } from 'react-native';
-import {line, publicStyle, width} from "../utils/publiscStyle";
+import {__TANGSHI__, line, publicStyle, width} from "../utils/publiscStyle";
 import CDButton from "../component/CDButton";
 
 const bg2 = require('../asset/bg/bg2.png');
@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   font7: {
-    fontFamily: "tangshi",
+    fontFamily: __TANGSHI__,
     color: "#FFFFFF",
     fontSize: 32
   },
   font8: {
-    fontFamily: "tangshi",
+    fontFamily: __TANGSHI__,
     color: "#FFFFFF",
     fontSize: 14
   },

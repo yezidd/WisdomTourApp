@@ -13,9 +13,11 @@ export const __IOS__ = Platform.OS === 'ios'
 export const __ANDROID__ = Platform.OS !== 'ios'
 export const line = 1 / PixelRatio.get();
 //宋字体
-export const __SONG__ = "song";
+export const __SONG__ = __IOS__ ? "\u7ecf\u5178\u5b8b\u4f53\u7b80" : "song";
 //黑字体
-export const __HEI__ = "hei";
+export const __HEI__ = __IOS__ ? "FZLanTingHeiS-R-GB" : "hei";
+//唐诗体
+export const __TANGSHI__ = __IOS__ ? "HYQuanTangShiF" : "tangshi";
 
 export const publicStyle = StyleSheet.create({
   container: {

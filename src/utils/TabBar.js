@@ -40,7 +40,7 @@ export const TabBar = TabNavigator(
       }
     },
     ScanResult: {
-      screen: ScanResult,
+      screen: ScanInfo,
       navigationOptions: {
         tabBarLabel: '我',
 
