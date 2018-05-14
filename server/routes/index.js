@@ -1,15 +1,19 @@
 const fs = require('fs');
-
+const mysql = require("../config/db");
 const router = require('koa-router')()
 
 router.get('/', async (ctx, next) => {
+  console.log(mysql, "===")
   await ctx.render('index', {
     title: 'Hello Koa 2!'
   })
 })
 
 router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string'
+  ctx.state.code = 1;
+  ctx.state.data = {
+    message: '1'
+  }
 })
 
 router.get('/json', async (ctx, next) => {

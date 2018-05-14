@@ -3,6 +3,7 @@ package com.wisdomtourapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import cn.qiuxiang.react.geolocation.AMapGeolocationPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.facebook.react.ReactNativeHost;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+            new RNDeviceInfo(),
             new AMapGeolocationPackage(),
             new RNCameraPackage(),
                     new AMap3DPackage()

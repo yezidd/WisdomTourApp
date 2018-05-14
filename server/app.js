@@ -5,12 +5,14 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const koaBody = require('koa-body');
 const logger = require('koa-logger')
-
+const response = require('./config/reponse');
 const index = require('./routes/index')
 const users = require('./routes/users')
 
 // error handler
 onerror(app)
+
+app.use(response);
 
 // middlewares
 app.use(koaBody({

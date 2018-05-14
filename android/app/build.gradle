@@ -165,6 +165,7 @@ configurations.all {
 }
 
 dependencies {
+    compile project(':react-native-device-info')
     compile project(':react-native-amap-geolocation')
     compile project(':react-native-camera')
     compile project(':react-native-amap3d')

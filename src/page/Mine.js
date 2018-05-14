@@ -15,6 +15,7 @@ import {
 import {line, publicStyle, width} from '../utils/publiscStyle'
 import {get} from '../logic/rpc';
 import TouchableItem from "../../react-navigation/src/views/TouchableItem";
+import {globalUserData} from "../logic/StoreGlobal";
 
 const list = require('../asset/icon/list.png')
 const mess = require('../asset/icon/mess.png')
@@ -196,10 +197,10 @@ export default class Mine extends Component {
           </View>
           <View style={styles.bottomHeader}>
             <TouchableOpacity style={styles.avatar} onPress={this.toLogin}>
-              <Text style={styles.font1}>登录</Text>
+              <Text style={styles.font1}>{globalUserData.phone === null ? "登录" : "已登录"}</Text>
             </TouchableOpacity>
             <View style={styles.nameView}>
-              <Text style={styles.font2}>半夏的小人祭</Text>
+              <Text style={styles.font2}>{globalUserData.username}</Text>
             </View>
             <TouchableOpacity style={styles.shareBtn} onPress={this.toScanModal}>
               <Text style={styles.font2}>拍照识图</Text>

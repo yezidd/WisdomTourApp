@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {StyleSheet, Switch, Text, View, Platform, TouchableOpacity, Alert, Image} from 'react-native'
 import {MapView} from 'react-native-amap3d'
 import {__IOS__, width} from '../utils/publiscStyle'
+import {getPreLoginStatus} from "../logic/MeetStore";
 
 const styles = StyleSheet.create({
   map: {
@@ -73,6 +74,17 @@ const meet_info = require("../asset/icon/info.png");
 export default class Meet extends Component {
   static navigationOptions = {
     header: null
+  };
+
+
+  async componentWillMount() {
+    this.setState({
+      loadingShow: true
+    });
+    await getPreLoginStatus();
+    this.setState({
+      loadingShow: false
+    });
   }
 
   state = {
@@ -82,7 +94,8 @@ export default class Meet extends Component {
     showsLocationButton: false,
     time: new Date(),
     lat: 0,
-    lon: 0
+    lon: 0,
+    loadingShow: false
   }
 
 
