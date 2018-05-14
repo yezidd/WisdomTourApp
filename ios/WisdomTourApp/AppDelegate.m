@@ -26,13 +26,12 @@
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   NSInteger totalCount = 0;
-  for (NSString *familyName in [UIFont familyNames]) {
-    NSArray *familyNameArr = [UIFont fontNamesForFamilyName:familyName];
-    NSLog(@"familyName:%@   count=%ld", familyName,[familyNameArr count]);
-    NSInteger tempCount = [familyNameArr count];
-    totalCount += tempCount;
-    for (NSString *fontName in familyNameArr) {
-      NSLog(@"++++     %@", fontName);
+  NSArray *familyNames = [UIFont familyNames];
+  for( NSString *familyName in familyNames ){
+    printf("Family: %s \n", [familyName UTF8String] );
+    NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
+    for( NSString *fontName in fontNames ){
+      printf("\tFont: %s \n", [fontName UTF8String] );
     }
   }
   NSLog(@"totalCount=%ld",totalCount);

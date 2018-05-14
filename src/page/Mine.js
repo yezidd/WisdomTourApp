@@ -14,6 +14,7 @@ import {
 } from 'react-native'
 import {line, publicStyle, width} from '../utils/publiscStyle'
 import {get} from '../logic/rpc';
+import TouchableItem from "../../react-navigation/src/views/TouchableItem";
 
 const list = require('../asset/icon/list.png')
 const mess = require('../asset/icon/mess.png')
@@ -171,6 +172,11 @@ export default class Mine extends Component {
     navigate("ScanModal")
   }
 
+  toLogin = () => {
+    const {navigate} = this.props.navigation;
+    navigate("Login");
+  }
+
   render() {
     return (
       <View style={publicStyle.container}>
@@ -189,9 +195,9 @@ export default class Mine extends Component {
             />
           </View>
           <View style={styles.bottomHeader}>
-            <View style={styles.avatar}>
+            <TouchableOpacity style={styles.avatar} onPress={this.toLogin}>
               <Text style={styles.font1}>登录</Text>
-            </View>
+            </TouchableOpacity>
             <View style={styles.nameView}>
               <Text style={styles.font2}>半夏的小人祭</Text>
             </View>

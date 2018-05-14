@@ -18,12 +18,12 @@ import Mine from '../page/Mine'
 import Meet from '../page/Meet'
 import ScanResult from "../page/ScanResult";
 import ScanInfo from "../page/ScanInfo";
-import Login from "../page/Login";
+
 
 export const TabBar = TabNavigator(
   {
     Meet: {
-      screen: Login,
+      screen: Meet,
       navigationOptions: {
         tabBarLabel: '遇见',
         tabBarIcon: ({focused, tintColor}) => (
@@ -32,24 +32,6 @@ export const TabBar = TabNavigator(
               !focused
                 ? require('../asset/tab1.png')
                 : require('../asset/tab1Active.png')
-            }
-            style={[styles.tabIcon]}
-            resizeMode="contain"
-          />
-        )
-      }
-    },
-    ScanResult: {
-      screen: ScanInfo,
-      navigationOptions: {
-        tabBarLabel: '我',
-
-        tabBarIcon: ({focused, tintColor}) => (
-          <Image
-            source={
-              !focused
-                ? require('../asset/tab3.png')
-                : require('../asset/tab3Active.png')
             }
             style={[styles.tabIcon]}
             resizeMode="contain"

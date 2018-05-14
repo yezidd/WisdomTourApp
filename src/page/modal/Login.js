@@ -11,11 +11,11 @@ import {
   ImageBackground,
   TouchableOpacity
 } from 'react-native';
-import {__TANGSHI__, line, publicStyle, width} from "../utils/publiscStyle";
-import CDButton from "../component/CDButton";
+import {__TANGSHI__, line, publicStyle, width} from "../../utils/publiscStyle";
+import CDButton from "../../component/CDButton";
 
-const bg2 = require('../asset/bg/bg2.png');
-const deleteIcon = require("../asset/icon/delete.png");
+const bg2 = require('../../asset/bg/bg2.png');
+const deleteIcon = require("../../asset/icon/delete.png");
 
 const styles = StyleSheet.create({
   bg2: {
@@ -120,6 +120,15 @@ export default class Login extends Component {
   static navigationOptions = {
     header: null
   }
+  //登录函数
+  subLogin = () => {
+    const {goBack} = this.props.navigation;
+    goBack();
+  }
+  goBackFor = () => {
+    const {goBack} = this.props.navigation;
+    goBack();
+  }
 
   render() {
     return (
@@ -129,13 +138,13 @@ export default class Login extends Component {
           resizeMode={"stretch"}
           style={styles.bg2}
         >
-          <View style={styles.topView}>
+          <TouchableOpacity style={styles.topView} onPress={this.goBackFor}>
             <Image
               source={deleteIcon}
               resizeMode={"contain"}
               style={styles.icon6}
             />
-          </View>
+          </TouchableOpacity>
           <View style={styles.titleView}>
             <Text style={styles.font7}>木语</Text>
             <Text style={styles.font8}>遇见 · 好景物</Text>
@@ -164,7 +173,7 @@ export default class Login extends Component {
               <View style={styles.line2}/>
               <CDButton style={styles.verifyBtn} textStyle={styles.font10}/>
             </View>
-            <TouchableOpacity style={styles.loginBtn}>
+            <TouchableOpacity style={styles.loginBtn} onPress={this.subLogin}>
               <Text style={styles.font10}>登录</Text>
             </TouchableOpacity>
           </View>

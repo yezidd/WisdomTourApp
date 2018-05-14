@@ -26,11 +26,14 @@ import {
 import {TabBar} from './utils/TabBar'
 import ScanModal from "./page/modal/ScanModal";
 import ScanInfo from "./page/ScanInfo";
+import Login from "./page/modal/Login";
+import ScanResult from "./page/ScanResult";
 
 const Stack = StackNavigator(
   {
     TabBar: TabBar,
-    ScanInfo: {screen: ScanInfo}
+    ScanInfo: {screen: ScanInfo},
+    ScanResult: {screen: ScanResult}
   },
   {
     initialRouteName: 'TabBar',
@@ -63,7 +66,8 @@ const Stack = StackNavigator(
 export const BottomModal = StackNavigator(
   {
     Stack: {screen: Stack},
-    ScanModal: {screen: ScanModal}
+    ScanModal: {screen: ScanModal},
+    Login: {screen: Login}
   },
   {
     mode: 'modal',

@@ -2,12 +2,13 @@ const router = require('koa-router')()
 
 router.prefix('/users')
 
-router.get('/', function (ctx, next) {
-  ctx.body = 'this is a users response!'
-})
+//用户登录函数
 
-router.get('/bar', function (ctx, next) {
-  ctx.body = 'this is a users/bar response'
-})
+//用户短信发送函数
 
-module.exports = router
+//用户换头像
+
+//用户改名
+
+
+module.exports = router;
