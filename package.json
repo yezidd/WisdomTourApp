@@ -18,7 +18,6 @@
     "jsxBracketSameLine": true
   },
   "dependencies": {
-    "@remobile/react-native-toast": "^1.0.7",
     "fbemitter": "^2.1.1",
     "leancloud-storage": "^3.6.8",
     "mobx": "^3.6.1",

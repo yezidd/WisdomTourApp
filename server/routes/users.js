@@ -6,7 +6,27 @@ const nameArray = require("../config/initialName");
 router.prefix('/users');
 
 //用户登录函数
+router.post("/login", async (ctx) => {
+  //验证码验证成功之后
+  //更新用户表中的手机号和设备号
+  let deviceId = ctx.request.body.deviceId;
+  let phone = ctx.request.body.phone;
 
+  //算了直接设备号跟手机号绑定好了，反正也不干什么，只是演示一下
+  let bindPhone = await mysql("user")
+    .update({
+      phone: phone
+    })
+    .where("deviceId", "=", deviceId);
+  if (bindPhone) {
+    ctx.state.code = 1;
+  } else {
+    ctx.state.code = 0;
+    ctx.state.data = {
+      message: "发生错误"
+    }
+  }
+});
 //用户短信发送函数
 
 //用户换头像
