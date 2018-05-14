@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import {__TANGSHI__, line, publicStyle, width} from "../../utils/publiscStyle";
 import CDButton from "../../component/CDButton";
+import AV from '../../logic/AVCloud';
 
 const bg2 = require('../../asset/bg/bg2.png');
 const deleteIcon = require("../../asset/icon/delete.png");
@@ -119,15 +120,31 @@ export default class Login extends Component {
 
   static navigationOptions = {
     header: null
-  }
+  };
   //登录函数
   subLogin = () => {
     const {goBack} = this.props.navigation;
     goBack();
-  }
+  };
   goBackFor = () => {
     const {goBack} = this.props.navigation;
     goBack();
+  };
+  //发送验证码
+  sendMess = () => {
+    console.log("=====执行")
+    AV.Cloud.requestSmsCode({
+      mobilePhoneNumber: '17816890887',
+      name: '木语',
+      op: '登录',
+      ttl: 10                     // 验证码有效时间为 10 分钟
+    }).then(function () {
+      console.log("=====成功")
+      //调用成功
+    }, function (err) {
+      console.log("=====失败")
+      //调用失败
+    });
   }
 
   render() {
@@ -171,7 +188,11 @@ export default class Login extends Component {
                 placeholderTextColor={"rgba(255,255,255,0.8)"}
               />
               <View style={styles.line2}/>
-              <CDButton style={styles.verifyBtn} textStyle={styles.font10}/>
+              <CDButton
+                style={styles.verifyBtn}
+                textStyle={styles.font10}
+                onPress={this.sendMess}
+              />
             </View>
             <TouchableOpacity style={styles.loginBtn} onPress={this.subLogin}>
               <Text style={styles.font10}>登录</Text>

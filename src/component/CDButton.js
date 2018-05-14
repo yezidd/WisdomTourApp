@@ -40,8 +40,10 @@ export default class CDButton extends Component {
   flag = false;
 
   sub = () => {
+
     if (this.cd === TIME) {
       this.flag = true;
+      this.props.onPress();
       let timer = setInterval(() => {
         this.cd = this.cd - 1;
         if (this.cd === 0) {
